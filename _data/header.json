@@ -1,0 +1,12 @@
+{
+  "ru": {
+    "name": "Привет, я Ульян.",
+    "position": "И я — фронтенд разработчик",
+    "avaSrc": "static/img/ava.png"
+  },
+  "en": {
+    "name": "Hi, my name is Uliyan",
+    "position": "And I am Frontend Engineer",
+    "avaSrc": "../static/img/ava.png"
+  }
+}

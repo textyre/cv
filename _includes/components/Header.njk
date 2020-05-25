@@ -1,0 +1,6 @@
+{% set locale = locale or metadata.locale %}
+<div class="header">
+    <img src="{{ header[locale].avaSrc }}" alt="Avatar" class="header-ava" />
+    <h1 class="header-name">{{ header[locale].name }}</h1>
+    <span class="header-position">{{ header[locale].position }}</span>
+</div>

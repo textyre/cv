@@ -1,0 +1,20 @@
+<div class="experience-card-container">
+    {% set cards = collections["experience_" + locale] %}
+    {%- for card in cards %}
+        <div class="experience-card {{ card.data.classname }}">
+            <div class="experience-card__title">
+                {% if card.data.img %}
+                    <img class="experience-card__title-icon" src="{{ card.data.img }}" alt="{{ card.data.title }}" />
+                {% endif %}
+                <div class="experience-card__title-name-container">
+                    {% if card.data.title %}
+                        <h3 class="experience-card__title-name">{{ card.data.title }}</h3>
+                    {% endif %}
+                    <span class="experience-card__title-experience">{{ card.data.labelExperience }} {{ card.data.experience }}</span>
+                </div>
+            </div>
+            {{ card.templateContent | safe }}
+        </div>
+    {%- endfor %}
+
+</div>

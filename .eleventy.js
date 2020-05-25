@@ -4,6 +4,7 @@ const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const util = require('util');
 
 module.exports = function(eleventyConfig) {
 
@@ -19,6 +20,19 @@ module.exports = function(eleventyConfig) {
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addCollection("experience_ru", function(collection) {
+    console.log(collection.getFilteredByGlob("./experience/*.md"))
+    return collection.getFilteredByGlob("./experience/*.md").sort(function(a, b) {
+      return a.date - b.date;
+    });
+  });
+
+  eleventyConfig.addCollection("experience_en", function(collection) {
+    return collection.getFilteredByGlob("./en/experience/*.md").sort(function(a, b) {
+      return a.date - b.date;
+    });
+  });
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -70,6 +84,7 @@ module.exports = function(eleventyConfig) {
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("static/fonts");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 
