@@ -1,3 +1,10 @@
 {
-  "locale": "ru"
+  "locale": "ru",
+  "form": {
+    "buttonHireMe": "Напишите мне",
+    "inputName": "Ваше имя",
+    "inputEmail": "Ваша почта",
+    "message": "Сообщение",
+    "sendMessage": "Отправить"
+  }
 }

@@ -1,3 +1,10 @@
 {
-  "locale": "en"
+  "locale": "en",
+  "form": {
+    "buttonHireMe": "Hire Me",
+    "inputName": "Your name",
+    "inputEmail": "Your Email",
+    "message": "Message",
+    "sendMessage": "Send"
+  }
 }

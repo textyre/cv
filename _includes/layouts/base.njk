@@ -6,6 +6,13 @@
 	<body>
 		<main>
 			{{ layoutContent | safe }}
+			{% include "components/HireMe.njk" %}
+			{% include "components/FormHireMe.njk" %}
 		</main>
 	</body>
+	{% set js %}
+		{% include "assets/js/inline.js" %}
+		{% include "assets/js/form.js" %}
+	{% endset %}
+	<script>{{ js | jsmin | safe }}</script>
 </html>

@@ -1,12 +1,26 @@
 :root {
-	--primary: blue;
-	--secondary: white;
-	--background: #0e141b;
+	--primary: #c569aa;
+	--primary-hover: #a354a1;
+	--secondary: #e8f0fe;
+	--secondary-hover: #d4ebfe;
+	--text: #0e141b;
+	--background-form-container: rgba(0, 0, 0, 0.4);
 	--background-card: #1f2229;
+	--background: #0e141b;
+	--background-second: #00161e;
+	--border-color: #2c3741;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+	font-family: "Museo Sans", "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 html,
@@ -15,7 +29,6 @@ body {
 	padding: 0;
 	margin: 0;
 	letter-spacing: 0.03em;
-	font-family: "Museo Sans", "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -154,30 +167,48 @@ form {
 	padding: 2em 0;
 }
 
-form label {
-  display: none;
-}
-
 input,
 textarea,
 button {
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-	font-size: 1rem;
-	font-family: "Avenir", "Avenir Next", sans-serif;
+  	width: 100%;
+  	padding: 1em;
+	background-color: #1f2229;
 }
 
 input,
 textarea {
-	border: 1px solid black;
+	border-radius: 8px;
+	border: 3px solid var(--border-color);
+	outline: none;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+input:focus, textarea:focus {
+	border: 3px solid var(--primary);
+}
+
+input:focus, textarea:focus,
+input:hover, textarea:hover {
+	background-color: var(--background);
 }
 
 button {
-	border: 1px solid var(--primary);
-	background-color: var(--primary);
-	color: var(--secondary);
+	border: none;
 	cursor: pointer;
+	color: var(--text);
+	background-color: var(--secondary);
+	border-radius: 3px;
+	padding: 8px 16px;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+button:hover {
+	background-color: var(--primary);
+	color: white;
+	outline-color: var(--primary);
 }
 
 @media screen and (min-width:768px) {

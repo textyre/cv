@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addCollection("experience_ru", function(collection) {
-    console.log(collection.getFilteredByGlob("./experience/*.md"))
+    // console.log(collection.getFilteredByGlob("./experience/*.md"))
     return collection.getFilteredByGlob("./experience/*.md").sort(function(a, b) {
       return a.date - b.date;
     });

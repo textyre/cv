@@ -1,0 +1,22 @@
+<div class="form-container">
+    <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            class="form-hire-me"
+    >
+        <p>
+            <label>{{ form.inputName }}<input type="text" name="name" /></label>
+        </p>
+        <p>
+            <label>{{ form.inputEmail }}<input type="email" name="email" /></label>
+        </p>
+        <p>
+            <label>{{ form.message }}<textarea name="message"></textarea></label>
+        </p>
+        <p>
+            <button type="submit">{{ form.sendMessage }} 💌</button>
+        </p>
+    </form>
+
+</div>
