@@ -7,6 +7,7 @@
     color: white;
     font-size: 1.2em;
     transition: transform 0.2s ease-in-out, background-image 0.2s ease-in-out;
+    box-shadow: 0 0 20px var(--primary);
 }
 
 .hire-me:hover {
@@ -33,7 +34,7 @@
 
 .form-hire-me {
     width: 100%;
-    margin: 0 15%;
+    margin: 0 5%;
     max-width: 500px;
     background-color: var(--background);
     border-radius: 16px;
@@ -50,4 +51,17 @@
     resize: vertical;
     max-height: 250px;
     min-height: 150px;
+}
+
+.form-hire-me button:nth-child(2) {
+    background: none;
+    color: var(--secondary);
+    margin-top: 16px;
+    border: 3px solid var(--secondary);
+}
+
+.form-hire-me button:nth-child(2):hover {
+    background: none;
+    color: var(--primary);
+    border-color: var(--primary);
 }

@@ -28,6 +28,6 @@ Form.prototype.onVisibleForm = function () {
 const NAME_FORM = 'contact';
 const form = new Form();
 
-const onClickHireMe = function onClickHireMe() {
+const onSetVisibleModal = function onSetVisibleModal() {
     form.onVisibleForm();
 };

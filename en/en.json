@@ -5,6 +5,7 @@
     "inputName": "Your name",
     "inputEmail": "Your Email",
     "message": "Message",
-    "sendMessage": "Send"
+    "sendMessage": "Send",
+    "closeModal": "Close"
   }
 }
