@@ -7,9 +7,12 @@
   {% set css %}
     {% include "assets/css/inline.css" %}
     {% include "assets/css/fonts.css" %}
-    {% include "assets/css/header.css" %}
     {% include "assets/css/hire-me.css" %}
-    {% include "assets/css/experince-card.css" %}
+    {% if section === 'home' %}
+      {% include "assets/css/header.css" %}
+      {% include "assets/css/about.css" %}
+      {% include "assets/css/experince-card.css" %}
+    {% endif %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
 </head>

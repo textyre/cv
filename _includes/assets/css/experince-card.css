@@ -1,23 +1,25 @@
 .experience-card-container {
-    display: inline-flex;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    flex-direction: column;
     margin-top: 32px;
+    height: 700px;
 }
 
 .experience-card-container .experience-card {
-    margin-right: 24px;
+    margin-right: 14px;
     margin-bottom: 24px;
 }
 
 .experience-card {
+    width: calc(100% / 3 - 28px);
     float: left;
     padding: 15px;
     background-color: var(--background-card);
     border-radius: 16px;
     transition: transform 0.2s ease-in-out, background-image 0.2s ease-in-out;
-    width: 280px;
 }
 
 .experience-card.slotex:hover {
@@ -32,6 +34,7 @@
     background-image: linear-gradient(to left top, #7e4198, #a354a1, #c569aa, #e381b3, #ff9bbe);
 }
 
+.experience-card.devly:hover,
 .experience-card.ozon:hover {
     background-image: linear-gradient(to left top, #005bff, #3978ff, #5e94ff, #83aeff, #a8c7ff);
 }
@@ -42,7 +45,7 @@
 
 .experience-card__title {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -50,7 +53,7 @@
     max-height: 50px;
     border-radius: 8px;
     transform: translateZ(0);
-    margin-right: 32px;
+    margin-right: 14px;
 }
 
 .experience-card__title-name {
@@ -64,4 +67,35 @@
 
 .experience-card p {
     font-size: 16px;
+}
+
+@media (min-width: 1920px) {
+    .experience-card-container {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .experience-card-container {
+        height: 800px;
+    }
+
+    .experience-card {
+        width: calc(100% / 2 - 28px);
+    }
+}
+
+@media (max-width: 1280px) {
+    .experience-card-container {
+        height: 1000px;
+    }
+}
+
+@media (max-width: 920px) {
+    .experience-card-container {
+        height: auto;
+    }
+    .experience-card {
+        width: 100%;
+    }
 }

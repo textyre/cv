@@ -10,7 +10,9 @@
                     {% if card.data.title %}
                         <h3 class="experience-card__title-name">{{ card.data.title }}</h3>
                     {% endif %}
-                    <span class="experience-card__title-experience">{{ card.data.labelExperience }} {{ card.data.experience }}</span>
+                    {% if card.data.experience %}
+                        <span class="experience-card__title-experience">{{ card.data.labelExperience }} {{ card.data.experience }}</span>
+                    {% endif %}
                 </div>
             </div>
             {{ card.templateContent | safe }}

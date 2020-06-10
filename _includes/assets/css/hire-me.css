@@ -4,8 +4,10 @@
     bottom: 25px;
     background-color: var(--primary);
     width: fit-content;
-    color: white;
+    word-break: keep-all;
     font-size: 1.2em;
+    color: white;
+    box-sizing: content-box;
     transition: transform 0.2s ease-in-out, background-image 0.2s ease-in-out;
     box-shadow: 0 0 20px var(--primary);
 }
@@ -30,6 +32,21 @@
 
 .form-container.visible {
     display: flex;
+}
+
+.form-container.visible .form-hire-me {
+    animation: visible 0.4s ease-in-out;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-hire-me {

@@ -21,6 +21,12 @@ module.exports = function(eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
+  eleventyConfig.addCollection('about_ru', collection => collection
+      .getFilteredByGlob("./about/*.md"));
+
+  eleventyConfig.addCollection('about_en', collection => collection
+      .getFilteredByGlob("./en/about/*.md"));
+
   eleventyConfig.addCollection("experience_ru", function(collection) {
     // console.log(collection.getFilteredByGlob("./experience/*.md"))
     return collection.getFilteredByGlob("./experience/*.md").sort(function(a, b) {
